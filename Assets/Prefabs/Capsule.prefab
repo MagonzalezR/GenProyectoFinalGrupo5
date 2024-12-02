@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4982585661138771042}
   - component: {fileID: 4481740523021788784}
   - component: {fileID: 4789841900829780341}
+  - component: {fileID: 8735426780196580257}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -66,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9218ff067e1e342489cd18ec97983705, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -128,8 +129,8 @@ MonoBehaviour:
   movZ: 0
   speed: 10.71
   timerRef: {fileID: 0}
-  jumpForce: 0
-  rotationSpeed: 0
+  jumpForce: 5
+  rotationSpeed: 80
   cameraRotationX: 0
   cameraRotationY: 0
   xRotation: 0
@@ -187,3 +188,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnOBj: {fileID: 0}
+--- !u!114 &8735426780196580257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240847622458846819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4480bcfa5c8fc4197a1d1cc1a2d335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
