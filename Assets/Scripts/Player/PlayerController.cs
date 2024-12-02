@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
+    private void Start() {
+        Cursor.lockState = CursorLockMode.Locked;
+        
+    }
     [SerializeField] private GameObject respawnOBj;
     private void FixedUpdate() {
-        if(Input.GetButtonDown("Fire1")){
-            PlayerRespawn();
-            transform.SetPositionAndRotation(respawnOBj.transform.position, transform.rotation);
-        }
     }
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Respawn")){
