@@ -100,7 +100,7 @@ public class MovePlayer : MonoBehaviour
     void RotatePlayer()
     {
         // Aplicar la rotación al Player
-        transform.localRotation = Quaternion.FromToRotation(Vector3.forward +Vector3.right, Vector3.right*movX + (Vector3.forward*movZ));
+        // transform.localRotation = Quaternion.FromToRotation(Vector3.forward +Vector3.right, Vector3.right*movX + (Vector3.forward*movZ));
         // transform.localRotation = Quaternion.Euler(0,transform.localRotation.y, 0);
     }
 
