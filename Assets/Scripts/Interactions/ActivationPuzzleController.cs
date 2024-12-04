@@ -7,6 +7,7 @@ public class ActivationPuzzleController : MonoBehaviour
 {
     [SerializeField] private List<int> playerSequence;
     [SerializeField] private List<int> puzzleSequence;
+    private bool puzzle1Completed = false;
 
     public static ActivationPuzzleController instance;
     private void Awake()
@@ -21,19 +22,30 @@ public class ActivationPuzzleController : MonoBehaviour
         }
         playerSequence = new List<int>();
     }
+    private void Update() {
+        if(!puzzle1Completed && playerSequence.ToCommaSeparatedString().Equals(puzzleSequence.ToCommaSeparatedString()) ){
+            puzzle1Completed = true;
+            GameManager.instance.SolvePuzzle();
+        }
+    }
     public bool AddToPlayerSequence(int value)
     {
-        if (playerSequence.Contains(value))
-        {
-            playerSequence.Remove(value);
-            return false;
+        if(!puzzle1Completed){
+            if (playerSequence.Contains(value))
+            {
+                playerSequence.Remove(value);
+                return false;
+            }
+            playerSequence.Add(value);
+            return true;
         }
-        playerSequence.Add(value);
-        return true;
+        return false;
     }
 
     public void toggleColor(GameObject gameObj)
     {
-        gameObj.GetComponent<ColorChanger>().changeColor();
+        if(!puzzle1Completed ){
+            gameObj.GetComponent<ColorChanger>().changeColor();
+        }
     }
 }

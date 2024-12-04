@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,31 +13,45 @@ public class MovePlayer : MonoBehaviour
     public GameObject timerRef;
     public int jumpForce;
     private CharacterController controller;
-    private Vector3 movement;
+    [SerializeField]private Vector3 movement;
     private float gravityScale = -9.8f;
+    private bool isMovingH, isMovingV;
 
     [Header("Camera Variables")]
-    [SerializeField]public float rotationSpeed, cameraRotationX, cameraRotationY;
-   [SerializeField] public float xRotation, yRotation;
+    [SerializeField] public float rotationSpeed, cameraRotationX, cameraRotationY;
+    [SerializeField] public float xRotation, yRotation;
 
     public bool end = false;
+
+    private Animator playerAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         CallInputs();
-        RotatePlayer();
+
 
         MovementPlayer();
         if (Input.GetButtonDown("Jump") && OnFloor())
         {
+            playerAnim.SetBool("inAir",true);
+            playerAnim.SetBool("inAir",false);
             JumpPlayer();
+        }
+        if (isMovingH || isMovingV)
+        {
+            playerAnim.SetBool("isWalking",true);
+            RotatePlayer();
+        }
+        else{
+            playerAnim.SetBool("isWalking", false);
         }
 
         if (!controller.isGrounded)
@@ -64,7 +79,8 @@ public class MovePlayer : MonoBehaviour
     private void MovementPlayer()
     {
 
-        movement = transform.right * movX + transform.forward * movZ;
+        movement = transform.forward * Mathf.Abs(movX) + transform.forward * Mathf.Abs(movZ);
+        // movement = transform.right * movX + transform.forward * movZ;
         controller.SimpleMove(movement * speed);
     }
 
@@ -74,6 +90,8 @@ public class MovePlayer : MonoBehaviour
         cameraRotationY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
         movX = Input.GetAxis("Horizontal");
         movZ = Input.GetAxis("Vertical");
+        isMovingH = Input.GetButton("Horizontal");
+        isMovingV = Input.GetButton("Vertical");
         xRotation -= cameraRotationY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         yRotation += cameraRotationX;
@@ -82,8 +100,8 @@ public class MovePlayer : MonoBehaviour
     void RotatePlayer()
     {
         // Aplicar la rotación al Player
-        transform.localRotation = Quaternion.Euler(0, yRotation, 0f);
-
+        transform.localRotation = Quaternion.FromToRotation(Vector3.forward +Vector3.right, Vector3.right*movX + (Vector3.forward*movZ));
+        // transform.localRotation = Quaternion.Euler(0,transform.localRotation.y, 0);
     }
 
     public bool OnFloor()

@@ -3001,6 +3001,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &722862785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2174810501085474903, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+  m_PrefabInstance: {fileID: 1357872008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &728095610
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,6 +4017,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3225488521509959515, guid: c30db69f42cf9bf478bf6b17e792d990, type: 3}
+      propertyPath: rotationSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4481740523021788784, guid: c30db69f42cf9bf478bf6b17e792d990, type: 3}
       propertyPath: respawnOBj
       value: 
@@ -4442,6 +4451,52 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1427762527269298617, guid: 66475ca7f66de784898c6acd0cd68475, type: 3}
+--- !u!1 &970487288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 970487290}
+  - component: {fileID: 970487289}
+  m_Layer: 0
+  m_Name: PuzzleController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &970487289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970487288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc23cf03f0d1bd44829f6689a3632a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSequence: 
+  puzzleSequence: 
+--- !u!4 &970487290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970487288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &974425640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5875,9 +5930,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1862294870672102205, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+      propertyPath: m_Name
+      value: PointLigthChangeObject
+      objectReference: {fileID: 0}
     - target: {fileID: 2174810501085474903, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
       propertyPath: m_Name
       value: ChangeObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601749586184770163, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601749586184770163, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601749586184770163, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+      propertyPath: m_Intensity
+      value: 839
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601749586184770163, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601749586184770163, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601749586184770163, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+      propertyPath: m_ColorTemperature
+      value: 4688.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601749586184770163, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9030453830513900378, guid: 35f83753354bc3e48b3b1038878c4980, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6621,6 +6708,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 789071641156668843, guid: 68ed8c2a50b4b824fa362dd9b62ee9ac, type: 3}
+      propertyPath: ActiveObj
+      value: 
+      objectReference: {fileID: 722862785}
     - target: {fileID: 4634292980844629757, guid: 68ed8c2a50b4b824fa362dd9b62ee9ac, type: 3}
       propertyPath: m_Name
       value: Interactor
@@ -9348,3 +9439,4 @@ SceneRoots:
   - {fileID: 829056115}
   - {fileID: 1540132737}
   - {fileID: 1357872008}
+  - {fileID: 970487290}
