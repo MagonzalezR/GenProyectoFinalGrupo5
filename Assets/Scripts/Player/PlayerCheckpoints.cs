@@ -13,5 +13,9 @@ public class PlayerCheckpoints : MonoBehaviour
         if(other.gameObject.CompareTag("checkpoint")){
             respawnOBj.transform.position = other.transform.position;
         }
+        if(other.gameObject.CompareTag("Respawn")){
+            transform.SetPositionAndRotation(respawnOBj.transform.position, transform.rotation);
+            // PlayerRespawn();
+        } 
     }
 }
