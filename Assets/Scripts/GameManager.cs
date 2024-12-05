@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void SolvePuzzle(){
