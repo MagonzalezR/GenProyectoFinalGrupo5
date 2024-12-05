@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Scripts/Player/RotatePlayer.cs.meta
 guid: 050c8c6eb3b25a3489fcda4a633507de
+=======
+guid: 10f0385053d38f54cac1a655f65b3e78
+>>>>>>> Stashed changes:Assets/TextMesh Pro 1/Examples & Extras/Scripts/DropdownSample.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
