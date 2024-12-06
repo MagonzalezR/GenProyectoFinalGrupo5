@@ -42,10 +42,10 @@ public class ActivationPuzzleController : MonoBehaviour
         return false;
     }
 
-    public void toggleColor(GameObject gameObj)
+    public void PuzzleInteract(GameObject gameObj)
     {
         if(!puzzle1Completed ){
-            gameObj.GetComponent<ColorChanger>().changeColor();
+            gameObj.GetComponent<InteractableObject>().Interaction();
         }
     }
 }

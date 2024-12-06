@@ -4,18 +4,30 @@ using UnityEngine;
 
 public class PlayerCheckpoints : MonoBehaviour
 {
-    [SerializeField] private GameObject respawnOBj;
+    [SerializeField] private Vector3 respawnPoint;
+    [SerializeField] private float botomLimit;
+    [SerializeField] private Reposition mainCameraReposition;
     
     private void Awake() {
-        respawnOBj.transform.position = transform.position;
+        respawnPoint = transform.position;
+    }
+
+    private void Update() {
+        if(transform.position.y <= botomLimit){
+            Respawn();
+        }
     }
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("checkpoint")){
-            respawnOBj.transform.position = other.transform.position;
+            respawnPoint = other.transform.position;
         }
         if(other.gameObject.CompareTag("Respawn")){
-            transform.SetPositionAndRotation(respawnOBj.transform.position, transform.rotation);
-            // PlayerRespawn();
+            Respawn();
         } 
+    }
+
+    private void Respawn(){
+        transform.SetPositionAndRotation(respawnPoint, transform.rotation);
+        mainCameraReposition.RepositionCamera();
     }
 }
