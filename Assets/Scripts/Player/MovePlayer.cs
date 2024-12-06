@@ -7,7 +7,7 @@ using UnityEngine.Animations;
 public class MovePlayer : MonoBehaviour
 {
     [SerializeField] Vector3 gravity;
-    [SerializeField] float movX;
+    [SerializeField] float movX, Zdistance;
     [SerializeField]private Vector3 movement;
     public float speed;
     [Range(1, 5)]
@@ -22,6 +22,7 @@ public class MovePlayer : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        Zdistance = transform.position.z;
         // playerAnim = GetComponent<Animator>();
     }
 
@@ -71,6 +72,7 @@ public class MovePlayer : MonoBehaviour
 
         movement = transform.right * movX;
         controller.SimpleMove(movement * speed);
+        GetComponentInChildren<Transform>().position.Set(transform.position.x, transform.position.y, Zdistance);
     }
 
     private void CallInputs()
@@ -81,5 +83,12 @@ public class MovePlayer : MonoBehaviour
     public bool OnFloor()
     {
         return controller.isGrounded;
+    }
+
+    IEnumerator DisableSpeedForTime(float time){
+        float tempSpeed = speed;
+        speed = 0;
+        yield return new WaitForSeconds(time);
+        speed = tempSpeed;
     }
 }

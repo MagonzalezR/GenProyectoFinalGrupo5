@@ -6,11 +6,16 @@ public class ActionActivator : MonoBehaviour
 {
     [SerializeField] private int puzzleIndex;
     [SerializeField] private GameObject ActiveObj;
+    [SerializeField] private bool isSequencePuzzle;
 
     public void ActivateObj()
     {
-        ActivationPuzzleController.instance.AddToPlayerSequence(puzzleIndex);
-        ActivationPuzzleController.instance.toggleColor(ActiveObj);
+
+        ActivationPuzzleController.instance.PuzzleInteract(ActiveObj);
+        if (isSequencePuzzle)
+        {
+            ActivationPuzzleController.instance.AddToPlayerSequence(puzzleIndex);
+        }
 
     }
 }

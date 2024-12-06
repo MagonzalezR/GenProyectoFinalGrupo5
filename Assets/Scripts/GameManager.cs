@@ -7,7 +7,12 @@ public class GameManager : MonoBehaviour
 {
 
     [SerializeField]private CinemachineVirtualCamera puzzle1Camera;
+    
+    [SerializeField] private OpenDoor openDoor;
+    [SerializeField] private GameObject playerObj;
     public static GameManager instance;
+
+
     private void Awake()
     {
         if (instance == null)
@@ -23,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void SolvePuzzle(){
         StartCoroutine("CameraOneViewChange");
+        StopPlayer(4);
     }
 
     IEnumerator CameraOneViewChange(){
@@ -30,5 +36,9 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         puzzle1Camera.Priority = 1;
 
+    }
+
+    public void StopPlayer(float time){
+        playerObj.GetComponent<MovePlayer>().StartCoroutine("DisableSpeedForTime",time);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotatePlayer : MonoBehaviour
 {
     float movX;
-    bool isMoving;
+    [SerializeField]bool isMoving;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +21,11 @@ public class RotatePlayer : MonoBehaviour
         if(isMoving){
             Rotaion();
         }
-        transform.localRotation = Quaternion.Euler(0,90*movX, 0);
     }
 
     void Rotaion()
     {
         // Aplicar la rotación al Player
-        transform.localRotation = Quaternion.Euler(0,90*movX, 0);
+        transform.localRotation = Quaternion.Euler(0, 90 * Mathf.Sign(movX), 0);
     }
 }

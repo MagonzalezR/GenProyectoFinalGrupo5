@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorChanger : MonoBehaviour
+public class ColorChanger : InteractableObject
 {
     [SerializeField] private Color baseColor, toggledColor;
     public Light controlledLight;
@@ -13,9 +13,9 @@ public class ColorChanger : MonoBehaviour
         baseColor = controlledLight.color;
     }
 
-    public void changeColor()
+    override
+    public void Interaction()
     {
-
         if (toggledColor !=null){
             if(controlledLight.color == baseColor){
                 controlledLight.color = toggledColor;
