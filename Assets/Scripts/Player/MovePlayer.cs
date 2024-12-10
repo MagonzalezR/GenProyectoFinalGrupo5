@@ -6,86 +6,44 @@ using UnityEngine.Animations;
 
 public class MovePlayer : MonoBehaviour
 {
-    [SerializeField] Vector3 gravity;
-    [SerializeField] float movX, Zdistance;
-    [SerializeField]private Vector3 movement;
-    public float speed;
-    [Range(1, 5)]
-    public GameObject timerRef;
-    public int jumpForce;
     private CharacterController controller;
-    private float gravityScale = -9.8f;
-    public bool end = false;
-    // private Animator playerAnim;
+    [SerializeField] Vector3 gravity;
+    [SerializeField] float movX;
+    private Vector3 movement;
+    public float speed, gravityScale = -9.8f;
+    public int jumpForce;
+    private bool groundedPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-        Zdistance = transform.position.z;
-        // playerAnim = GetComponent<Animator>();
+        controller = gameObject.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        CallInputs();
+        groundedPlayer = controller.isGrounded;
 
-
-        MovementPlayer();
-        if (Input.GetButtonDown("Jump") && OnFloor())
+        gravity = new Vector3(Input.GetAxis("Horizontal") * speed, gravity.y, 0);
+        if (groundedPlayer && gravity.y < 0)
         {
-            JumpPlayer();
+            gravity.y = 0f;
         }
-        // if (movX!=0)
-        // {
-        //     playerAnim.SetBool("isWalking",true);
-        // }
-        // else{
-        //     playerAnim.SetBool("isWalking", false);
-        // }
 
-        if (!controller.isGrounded)
-        {
-            ApplyGravity();
-        }
-        else
-        {
-            gravity.y = -2;
-        }
-    }
-    private void JumpPlayer()
-    {
-        gravity.y = Mathf.Sqrt(gravityScale * -2 * jumpForce);
-        controller.Move(gravity * Time.deltaTime);
-    }
+        // controller.Move(movement * Time.deltaTime * speed);
 
-    private void ApplyGravity()
-    {
+        // Makes the player jump
+        if (Input.GetButtonDown("Jump") && groundedPlayer)
+        {
+            gravity.y += Mathf.Sqrt(jumpForce * -2.0f * gravityScale);
+        }
         gravity.y += gravityScale * Time.deltaTime;
         controller.Move(gravity * Time.deltaTime);
-
     }
 
-    private void MovementPlayer()
+    IEnumerator DisableSpeedForTime(float time)
     {
-
-        movement = transform.right * movX;
-        controller.SimpleMove(movement * speed);
-        GetComponentInChildren<Transform>().position.Set(transform.position.x, transform.position.y, Zdistance);
-    }
-
-    private void CallInputs()
-    {
-        movX = Input.GetAxis("Horizontal");
-    }
-
-    public bool OnFloor()
-    {
-        return controller.isGrounded;
-    }
-
-    IEnumerator DisableSpeedForTime(float time){
         float tempSpeed = speed;
         speed = 0;
         yield return new WaitForSeconds(time);

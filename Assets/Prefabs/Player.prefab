@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4461240427894437512}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,12 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: {x: 0, y: 0, z: 0}
   movX: 0
-  Zdistance: 0
-  movement: {x: 0, y: 0, z: 0}
-  speed: 10
-  timerRef: {fileID: 0}
-  jumpForce: 6
-  end: 0
+  speed: 6
+  gravityScale: -9.8
+  jumpForce: 3
 --- !u!114 &2094981160880957082
 MonoBehaviour:
   m_ObjectHideFlags: 0

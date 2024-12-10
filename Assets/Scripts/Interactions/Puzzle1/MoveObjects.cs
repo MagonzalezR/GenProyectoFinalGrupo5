@@ -9,17 +9,21 @@ public class MoveObjects : InteractableObject
     private Vector3 initPos, startPosition, endPosition; // Ending position
     float elapsedTime = 0.0f; // Time elapsed since the start of the movement
 
-    private void Start() {
+    private void Start()
+    {
         startPosition = transform.position;
         endPosition = startPosition + new Vector3(xMovement, yMovement, zMovement);
     }
     void Update()
     {
-        if (elapsedTime < duration) {
+        if (elapsedTime < duration)
+        {
             float t = elapsedTime / duration; // Calculate the interpolation factor
             transform.position = Vector3.Lerp(startPosition, endPosition, t); // Interpolate position
             elapsedTime += Time.deltaTime; // Update elapsed time
-        } else {
+        }
+        else
+        {
             elapsedTime = 0;
             initPos = startPosition;
             startPosition = endPosition;
@@ -28,8 +32,24 @@ public class MoveObjects : InteractableObject
     }
 
     override
-    public void Interaction(){
+    public void Interaction()
+    {
         gameObject.SetActive(true);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.transform.SetParent(this.transform);
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Player"))
+        {
+            transform.DetachChildren();
+        }
     }
 
 
