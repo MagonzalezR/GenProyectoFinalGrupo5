@@ -513,7 +513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Instrucciones
+  m_text: Instructions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 556da4c2e8e75be4fa81ba26b60f8c4d, type: 2}
   m_sharedMaterial: {fileID: 5338171083131895725, guid: 556da4c2e8e75be4fa81ba26b60f8c4d, type: 2}
@@ -2004,7 +2004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creditos
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 556da4c2e8e75be4fa81ba26b60f8c4d, type: 2}
   m_sharedMaterial: {fileID: 5338171083131895725, guid: 556da4c2e8e75be4fa81ba26b60f8c4d, type: 2}
@@ -3096,7 +3096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jugar
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 556da4c2e8e75be4fa81ba26b60f8c4d, type: 2}
   m_sharedMaterial: {fileID: 5338171083131895725, guid: 556da4c2e8e75be4fa81ba26b60f8c4d, type: 2}
