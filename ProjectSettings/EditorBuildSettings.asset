@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Biblioteca.unity
     guid: 1caaa0cc387a44646becc015a959cf1a
+  - enabled: 1
+    path: Assets/Scenes/Alquimista.unity
+    guid: 2734e98904c000c4281c9b6e6386023f
   m_configObjects: {}
