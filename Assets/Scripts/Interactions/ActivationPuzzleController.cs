@@ -25,7 +25,7 @@ public class ActivationPuzzleController : MonoBehaviour
     private void Update() {
         if(!puzzle1Completed && playerSequence.ToCommaSeparatedString().Equals(puzzleSequence.ToCommaSeparatedString()) ){
             puzzle1Completed = true;
-            GameManager.instance.SolvePuzzle();
+            LevelManager.instance.SolvePuzzle();
         }
     }
     public bool AddToPlayerSequence(int value)

@@ -19,7 +19,7 @@ public class Reposition : MonoBehaviour
         cinemachineComposer.m_DeadZoneHeight=0;
         cinemachineComposer.m_DeadZoneWidth=0;
         StartCoroutine("ReturnToDefault");
-        GameManager.instance.StopPlayer(2);
+        LevelManager.instance.StopPlayer(2);
     }
 
     IEnumerator ReturnToDefault(){

@@ -58,7 +58,7 @@ CharacterController:
   serializedVersion: 3
   m_Height: 1.2
   m_Radius: 0.32
-  m_SlopeLimit: 45
+  m_SlopeLimit: 90
   m_StepOffset: 0.3
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
@@ -99,9 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: {x: 0, y: 0, z: 0}
   movX: 0
-  speed: 6
+  speed: 4
   gravityScale: -9.8
-  jumpForce: 3
+  jumpForce: 2
 --- !u!114 &2094981160880957082
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class ActionActivator : MonoBehaviour
 
     IEnumerator CameraViewChange(float time)
     {
+        Debug.Log(time);
         if (time > 0)
         {
             cameraPuzzle.Priority += 2;
