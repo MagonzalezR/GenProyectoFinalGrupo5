@@ -359,8 +359,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.119, y: 173}
-  m_SizeDelta: {x: 667.976, y: 299.691}
+  m_AnchoredPosition: {x: 46.119, y: 184.799}
+  m_SizeDelta: {x: 667.98, y: 276.094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154297552
 MonoBehaviour:
@@ -406,11 +406,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1259505794}
-        m_TargetAssemblyTypeName: UnityEngine.EventSystems.StandaloneInputModule,
-          UnityEngine.UI
-        m_MethodName: set_submitButton
-        m_Mode: 5
+      - m_Target: {fileID: 1712174233}
+        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
+        m_MethodName: jugar
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -911,8 +910,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.119, y: -178.30199}
-  m_SizeDelta: {x: 667.976, y: 299.691}
+  m_AnchoredPosition: {x: 46.119, y: -197.18}
+  m_SizeDelta: {x: 667.976, y: 261.936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535815661
 MonoBehaviour:
@@ -2257,7 +2256,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 138.36
   m_DefaultSpriteDPI: 160.9
@@ -2810,8 +2809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.119, y: -2.2180176}
-  m_SizeDelta: {x: 667.976, y: 299.691}
+  m_AnchoredPosition: {x: 46.119, y: -1}
+  m_SizeDelta: {x: 667.976, y: 273.734}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007300404
 MonoBehaviour:
@@ -3186,6 +3185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Buttom-Volver
       objectReference: {fileID: 0}
+    - target: {fileID: 2480840981057542514, guid: 15f387a6bfa938c4cb14c8dd8af64f48, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4162010912118283564, guid: 15f387a6bfa938c4cb14c8dd8af64f48, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3252,7 +3255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4162010912118283564, guid: 15f387a6bfa938c4cb14c8dd8af64f48, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 121.11914
+      value: 203
       objectReference: {fileID: 0}
     - target: {fileID: 4162010912118283564, guid: 15f387a6bfa938c4cb14c8dd8af64f48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
