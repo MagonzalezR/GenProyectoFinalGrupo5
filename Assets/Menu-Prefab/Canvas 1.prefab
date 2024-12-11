@@ -2043,7 +2043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1473048095181319819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7393,7 +7393,7 @@ GameObject:
   - component: {fileID: 1092396261220709485}
   - component: {fileID: 2354336145463282880}
   - component: {fileID: 7536629128559183905}
-  - component: {fileID: 4147095478361960224}
+  - component: {fileID: 5735218171727192585}
   m_Layer: 5
   m_Name: PanelTexto
   m_TagString: Untagged
@@ -7459,7 +7459,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4147095478361960224
+--- !u!114 &5735218171727192585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7468,18 +7468,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9187337397218910042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ba805a47e21d44da8ac502eb8e3ef3, type: 3}
+  m_Script: {fileID: 11500000, guid: aacac62b21501a54dbafc3e622ac976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 7815320508059260150}
-  dialogues: []
-  typingSpeed: 0.05
   fadeImage: {fileID: 2527843717710251077}
   fadeDuration: 1
+  startWithFadeIn: 1
   nextSceneName: Intro
-  images:
-  - {fileID: 7145110628588440600}
-  imageDisplayTime: 3
 --- !u!1 &9210407479995380157
 GameObject:
   m_ObjectHideFlags: 0
