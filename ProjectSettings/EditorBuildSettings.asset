@@ -6,12 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Portada.unity
+    guid: cd3a7607801e79b4584d7828d29173c1
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 279ceb4c8fdae89468bcf4a91a5a4457
+  - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 065c71a49a2c27540ade1308bc1a99be
+  - enabled: 1
+    path: Assets/Scenes/Biblioteca.unity
+    guid: 1caaa0cc387a44646becc015a959cf1a
   - enabled: 1
     path: Assets/Scenes/Arte.unity
     guid: eb48301a749493d47a7742cf196cd0de
   - enabled: 1
-    path: Assets/Scenes/Biblioteca.unity
-    guid: 1caaa0cc387a44646becc015a959cf1a
+    path: Assets/Scenes/Laboratorio.unity
+    guid: f1435d692a778e4418d17a3b28590b03
+  - enabled: 1
+    path: Assets/Scenes/Alquimista.unity
+    guid: 2734e98904c000c4281c9b6e6386023f
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 29d512118400cb144b6aa38b3a4ebad2
   m_configObjects: {}
