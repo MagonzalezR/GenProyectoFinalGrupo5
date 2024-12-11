@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class SceneFader : MonoBehaviour
 {
     public Image fadeImage; // Referencia al panel de fade
     public float fadeDuration = 1f; // Duración del fade
     public bool startWithFadeIn = true; // Controla si se inicia con Fade In
-    public string nextSceneName = "MenuPrincipal";
+    // public string nextSceneName = "MenuPrincipal";
 
     void Start()
     {
@@ -17,6 +16,7 @@ public class SceneFader : MonoBehaviour
         {
             StartCoroutine(FadeIn());
         }
+        StartCoroutine(FadeOut());
     }
 
     public IEnumerator FadeIn()
@@ -39,22 +39,22 @@ public class SceneFader : MonoBehaviour
 
     public IEnumerator FadeOut()
     {
-         fadeImage.raycastTarget = true; // Bloquear clics durante el Fade Out
-    float timer = 0;
-    Color fadeColor = fadeImage.color;
+        fadeImage.raycastTarget = true; // Bloquear clics durante el Fade Out
+        float timer = 0;
+        Color fadeColor = fadeImage.color;
 
-    while (timer < fadeDuration)
-    {
-        timer += Time.deltaTime;
-        fadeColor.a = timer / fadeDuration;
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            fadeColor.a = timer / fadeDuration;
+            fadeImage.color = fadeColor;
+            yield return null;
+        }
+
+        fadeColor.a = 1;
         fadeImage.color = fadeColor;
-        yield return null;
-    }
 
-    fadeColor.a = 1;
-    fadeImage.color = fadeColor;
-
-    //Cargar la próxima escena
-    SceneManager.LoadScene(nextSceneName);
+        //Cargar la próxima escena
+        GameManager.instance.play();
     }
 }

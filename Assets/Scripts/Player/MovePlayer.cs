@@ -45,6 +45,7 @@ public class MovePlayer : MonoBehaviour
     IEnumerator DisableSpeedForTime(float time)
     {
         float tempSpeed = speed;
+        Debug.Log(tempSpeed);
         speed = 0;
         yield return new WaitForSeconds(time);
         speed = tempSpeed;

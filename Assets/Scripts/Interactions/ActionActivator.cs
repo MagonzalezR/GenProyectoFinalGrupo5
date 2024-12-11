@@ -26,21 +26,22 @@ public class ActionActivator : MonoBehaviour
 
     IEnumerator CameraViewChange(float time)
     {
-        if (time > 0)
+        if (cameraPuzzle != null)
         {
             cameraPuzzle.Priority += 2;
         }
+        LevelManager.instance.StopPlayer(time*2);
         yield return new WaitForSeconds(time);
         foreach (var Obj in ActiveObjList)
         {
             ActivationPuzzleController.instance.PuzzleInteract(Obj);
         }
         yield return new WaitForSeconds(time);
-        if (time > 0)
+        if (cameraPuzzle != null)
         {
             cameraPuzzle.Priority -= 2;
-            timeCinematics = 0;
         }
+        timeCinematics = 0;
 
     }
 }

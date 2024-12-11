@@ -40,6 +40,7 @@ public class LevelManager : MonoBehaviour
     }
 
     public void StopPlayer(float time){
+        if(time<=0) return;
         playerObj.GetComponent<MovePlayer>().StartCoroutine("DisableSpeedForTime",time);
     }
 }

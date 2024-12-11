@@ -122,17 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &43547895 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6058838501337014289, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-  m_PrefabInstance: {fileID: 1520137107}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &109064653
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,28 +332,63 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &172259807 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 541830554540835216, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-  m_PrefabInstance: {fileID: 1520137107}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &473245032 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2879635050854704972, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-  m_PrefabInstance: {fileID: 1520137107}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+--- !u!1001 &1479769863
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.933034
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.671438
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -56.066452
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062608061803147399, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
 --- !u!1001 &1520137107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -373,58 +397,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1273629916435652678, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
+    - target: {fileID: 307085842315763518, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: images.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: dialogues.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: images.Array.data[0]
-      value: 
-      objectReference: {fileID: 43547895}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: images.Array.data[2]
-      value: 
-      objectReference: {fileID: 172259807}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: images.Array.data[3]
-      value: 
-      objectReference: {fileID: 473245032}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: dialogues.Array.data[0]
-      value: "What is this place? Everything seems shrouded in shadows... I don\u2019t
-        remember how I got here, but... I feel like I\u2019m not alone."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: dialogues.Array.data[1]
-      value: Pandora... Wake up. This reliquary holds secrets you must uncover. Your
-        memories are hidden, and your destiny begins here.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: dialogues.Array.data[2]
-      value: "Who\u2019s speaking?! Why do I know that name...? Pandora...? Is that
-        me?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425417066285344043, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: dialogues.Array.data[3]
-      value: "I have to move. Even though I don\u2019t understand anything, I feel
-        like I need to find answers. Something in this place is calling me... and
-        terrifying me at the same time."
-      objectReference: {fileID: 0}
-    - target: {fileID: 2205904268795389381, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284830451672021055, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4035827312006029642, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
       propertyPath: m_Name
@@ -510,15 +485,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4474074745893774286, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 5557276807445520094, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.03
       objectReference: {fileID: 0}
-    - target: {fileID: 4811896810303505079, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 5557276807445520094, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.06
       objectReference: {fileID: 0}
-    - target: {fileID: 6788922857849779012, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
+    - target: {fileID: 5735218171727192585, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
+      propertyPath: fadeDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226181500831402075, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -534,3 +513,4 @@ SceneRoots:
   - {fileID: 109064656}
   - {fileID: 143527487}
   - {fileID: 1520137107}
+  - {fileID: 1479769863}

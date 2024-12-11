@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6226181500831402075, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7405774644918008923, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
       propertyPath: dialogues.Array.data[0]
       value: This place... it's different. Every object here seems charged with energy.
@@ -370,6 +374,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7198bce8cb2d1724c83ea340ac86f3ab, type: 3}
+--- !u!1001 &1817926152
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.933034
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.671438
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -56.066452
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462992006462349850, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062608061803147399, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f04749c769d6fc64b90f17e4345f482b, type: 3}
 --- !u!1 &1839959608
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,3 +530,4 @@ SceneRoots:
   - {fileID: 1839959611}
   - {fileID: 138788298}
   - {fileID: 1753822009}
+  - {fileID: 1817926152}

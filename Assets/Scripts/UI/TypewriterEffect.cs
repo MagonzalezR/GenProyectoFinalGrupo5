@@ -2,13 +2,13 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class TypewriterEffect : MonoBehaviour
 {
     public TextMeshProUGUI textComponent; // El texto que aparecerá
     public string[] dialogues; // Array de textos para cada imagen
     public float typingSpeed = 0.05f; // Velocidad de tipeo (en segundos)
+    public bool hasSpecificScene = false;
     public Image fadeImage; // Imagen para el Fade Out/In
     public float fadeDuration = 1f; // Duración del Fade Out/In
     public string nextSceneName = "MenuPrincipal"; // Escena a la que se cargará al finalizar
@@ -98,6 +98,11 @@ public class TypewriterEffect : MonoBehaviour
         fadeImage.color = fadeColor;
 
         // Cargar la próxima escena
-        SceneManager.LoadScene(nextSceneName);
+        if(hasSpecificScene){
+            GameManager.instance.goScene(nextSceneName);
+        }
+        else{
+            GameManager.instance.play();
+        }
     }
 }
