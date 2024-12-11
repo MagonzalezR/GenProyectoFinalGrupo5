@@ -9,7 +9,7 @@ public class SceneFader : MonoBehaviour
     public Image fadeImage; // Referencia al panel de fade
     public float fadeDuration = 1f; // Duración del fade
     public bool startWithFadeIn = true; // Controla si se inicia con Fade In
-    //public string nextSceneName = "MenuPrincipal";
+    public string nextSceneName = "MenuPrincipal";
 
     void Start()
     {
@@ -54,7 +54,7 @@ public class SceneFader : MonoBehaviour
     fadeColor.a = 1;
     fadeImage.color = fadeColor;
 
-    // Cargar la próxima escena
-    //SceneManager.LoadScene(nextSceneName);
+    //Cargar la próxima escena
+    SceneManager.LoadScene(nextSceneName);
     }
 }
