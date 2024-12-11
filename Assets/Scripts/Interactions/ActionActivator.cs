@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ActionActivator : MonoBehaviour
 {
-    [SerializeField] private int puzzleIndex;
+    [SerializeField] private ColorChanger objectIndex;
     [SerializeField] private List<GameObject> ActiveObjList;
     [SerializeField] private GameObject ActiveObj;
     [SerializeField] private bool isSequencePuzzle;
@@ -19,14 +19,13 @@ public class ActionActivator : MonoBehaviour
         if (isSequencePuzzle)
         {
             ActivationPuzzleController.instance.PuzzleInteract(ActiveObj);
-            ActivationPuzzleController.instance.AddToPlayerSequence(puzzleIndex);
+            ActivationPuzzleController.instance.AddToPlayerSequence(objectIndex);
         }
 
     }
 
     IEnumerator CameraViewChange(float time)
     {
-        Debug.Log(time);
         if (time > 0)
         {
             cameraPuzzle.Priority += 2;
