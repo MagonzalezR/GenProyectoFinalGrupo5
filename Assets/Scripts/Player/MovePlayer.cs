@@ -35,7 +35,7 @@ public class MovePlayer : MonoBehaviour
 
         // Makes the player jump
         if (Input.GetButtonDown("Jump") && groundedPlayer)
-        {
+        {  
             gravity.y += Mathf.Sqrt(jumpForce * -2.0f * gravityScale);
         }
         gravity.y += gravityScale * Time.deltaTime;
